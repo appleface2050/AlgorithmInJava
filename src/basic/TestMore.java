@@ -1,35 +1,54 @@
 package basic;
 
-
-class Test
-{
-	public double size;
-	public String name;
-	public Test(double size, String name)
-	{
-		this.size = size;
-		this.name = name;
+class Root {
+	static {
+		System.out.println("Root static");
 	}
-	public void tellName(){
-		System.out.println(this.name);
+	{
+		System.out.println("Root normal");
 	}
 
 }
 
-public class TestMore extends Test{
-
-	public TestMore(double size, String name) {
-		super(size, name);
-		// TODO Auto-generated constructor stub
+class Mid extends Root {
+	static {
+		System.out.println("Mid static");
 	}
-	
-	public void tellSize(){
-		System.out.println(this.size);
+	{
+		System.out.println("Mid normal");
 	}
 
-	public static void main(String[] args){
-		Test a = new TestMore(1,"qq");
-		System.out.println(a.size+" "+a.name);
-//		a.tellsize();//不能调用子类的方法了
+	public Mid() {
+		System.out.println("Mid constructor");
 	}
+
+	public Mid(String msg) {
+		this();
+		System.out.println("Mid constructor with args:" + msg);
+	}
+}
+
+class Leaf extends Mid {
+
+	static {
+		System.out.println("Leaf static");
+	}
+	{
+		System.out.println("Leaf normal");
+	}
+
+	public Leaf() {
+		super("crezy java");
+		System.out.println("Leaf contructor");
+	}
+
+}
+
+public class TestMore {
+	public static void main(String[] args) {
+		new Leaf();
+		System.out.println("--------------------");
+		new Leaf();
+	}
+
 }
