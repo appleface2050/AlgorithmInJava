@@ -1,4 +1,4 @@
-package basic;
+package crazyjava;
 
 class OER {
 	private String name;

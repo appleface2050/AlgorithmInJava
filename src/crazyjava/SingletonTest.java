@@ -1,4 +1,4 @@
-package basic;
+package crazyjava;
 
 class Singleton {
 	private static Singleton instance;

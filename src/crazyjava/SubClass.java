@@ -1,4 +1,4 @@
-package basic;
+package crazyjava;
 
 class BaseClass {
 	public int book = 6;

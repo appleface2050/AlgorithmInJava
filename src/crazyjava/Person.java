@@ -1,59 +1,36 @@
 package crazyjava;
 
-class Name {
-	private String firstName;
-	private String lastName;
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public Name() {
-	}
-
-	public Name(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
-}
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Person {
-	private final Name name;
+	private String name;
+	private int age;
 
-	public Person(Name name) {
-//		this.name = name;
-		this.name = new Name(name.getFirstName(), name.getLastName());
-		
+	public void setName(String name) {
+		if (name.length() > 6 || name.length() < 2) {
+			System.out.println("name wrong");
+			return;
+		} else {
+			this.name = name;
+		}
 	}
 
-	public Name getName() {
-//		return this.name;
-		return new Name(this.name.getFirstName(), this.name.getLastName());
+	public String getName() {
+		return this.name;
 	}
 
-	public static void main(String[] args) {
-		Name n = new Name("wukong", "sun");
-		Person p = new Person(n);
-		System.out.println(p.getName().getFirstName());
-		
-		n.setFirstName("bajie");
-		
-		System.out.println(p.getName().getFirstName());
-		
-		
+	public void setAge(int age) {
+		if (age > 100 || age < 0) {
+			System.out.println("age wrong");
+			return;
+		} else {
+			this.age = age;
+		}
+	}
+
+	public int getAge() {
+		return this.age;
 	}
 
 }

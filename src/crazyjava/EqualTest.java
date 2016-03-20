@@ -1,4 +1,4 @@
-package basic;
+package crazyjava;
 
 public class EqualTest {
 
