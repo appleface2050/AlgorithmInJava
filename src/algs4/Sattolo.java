@@ -12,6 +12,8 @@
  *  0 and 1.
  *
  *  %  echo 0 1 2 3 4 | java Sattolo
+ *  %  echo 0 1 2 3 5 | java -cp .;stdlib.jar Sattolo
+ *
  *  1
  *  2
  *  4
