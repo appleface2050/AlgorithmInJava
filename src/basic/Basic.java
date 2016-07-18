@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Basic {
 
-	// Êý×é²éÕÒ×î´óÖµ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 	public static int findMaxInList(int[] a) {
 		int max = a[0];
 		for (int i = 1; i < a.length; i++) {
@@ -15,7 +15,7 @@ public class Basic {
 		return max;
 	}
 
-	// ¼ÆËãÊý×éÔªËØÆ½¾ùÖµ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Æ½ï¿½ï¿½Öµ
 	public static double countAverageValue(int[] a) {
 		int N = a.length;
 		double sum = 0.0;
@@ -25,7 +25,7 @@ public class Basic {
 		return sum / N;
 	}
 
-	// ¸´ÖÆÊý×é
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static int[] copyList(int[] a) {
 		int[] b = new int[a.length];
 		for (int i = 0; i < a.length; i++) {
@@ -34,7 +34,7 @@ public class Basic {
 		return b;
 	}
 
-	// µßµ¹Êý×éÔªËØË³Ðò
+	// ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ë³ï¿½ï¿½
 	public static int[] reverseList(int[] a) {
 		int[] b = new int[a.length];
 		for (int i = 0; i < a.length; i++) {
@@ -43,7 +43,7 @@ public class Basic {
 		return b;
 	}
 
-	// ¾ØÕóÏà³Ë £¨µã³Ë£©
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ë£ï¿½
 	public static int[][] matrixMultiply(int[][] a, int[][] b) {
 		int N = a.length;
 		int[][] c = new int[N][N];
